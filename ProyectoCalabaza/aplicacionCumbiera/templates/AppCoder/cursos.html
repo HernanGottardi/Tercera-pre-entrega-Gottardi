@@ -1,0 +1,28 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}  
+
+{% block titulo %}
+<h1>Seccion Cursos</h1>
+{% endblock %} 
+
+{% block contenido_que_cambia %}
+<h1>Formulario - Cursos</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}   
+    </table>
+    <br>
+  <input type="submit" value="Agregar">
+</form>
+<br>
+<h1>Buscar - Comision</h1>
+<table>
+  <form action="/aplicacionCumbiera/buscar/" method="GET">
+      <input type="number" name="comision" id="comision">
+      <input type="submit" value="Buscar">
+  </form>
+</table>
+
+{% endblock %}

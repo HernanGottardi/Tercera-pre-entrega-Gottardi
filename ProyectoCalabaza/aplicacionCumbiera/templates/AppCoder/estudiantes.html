@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}  
+
+{% block titulo %}
+    <h1>Seccion Estudiantes</h1>
+{% endblock %} 
+
+{% block contenido_que_cambia %}
+
+<h1>Formulario - estudiantes</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}   
+    </table>
+  <input type="submit" value="Agregar">
+</form>
+<table>
+
+{% endblock %}

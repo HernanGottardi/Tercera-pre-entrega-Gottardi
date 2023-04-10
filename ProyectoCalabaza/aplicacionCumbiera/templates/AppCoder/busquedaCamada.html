@@ -1,0 +1,15 @@
+<p>Estamos buscando el: {{comision}}</p>
+
+{% if cursos %}
+
+<ul>
+{% for curso in cursos%}
+
+    <li>{{curso.nombre}}</li>
+    <li>{{curso.comision}}</li>
+
+{% endfor %}
+</ul>
+
+{% endif %}
+
